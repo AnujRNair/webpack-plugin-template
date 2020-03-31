@@ -1,0 +1,55 @@
+{
+  "name": "webpack-plugin-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "plugin.js",
+  "scripts": {
+    "eslint": "eslint .",
+    "eslint:fix": "eslint . --fix",
+    "jest": "jest --config=./jest.config.js plugin.jest.js",
+    "jest:watch": "jest --watch --verbose=false --config=./jest.config.js plugin.jest.js",
+    "jest:coverage:generate": "jest --coverage --config=./jest.config.js plugin.jest.js",
+    "jest:coverage:clean": "rm -rf ./coverage",
+    "jest:coverage": "npm run jest:coverage:clean && npm run jest:coverage:generate",
+    "test": "npm run eslint && npm run jest  && npm run jest:coverage"
+  },
+  "homepage": "https://github.com/AnujRNair/webpack-plugin-template",
+  "bugs": "https://github.com/AnujRNair/webpack-plugin-template/issues",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:AnujRNair/webpack-plugin-template.git"
+  },
+  "keywords": [
+    "slack",
+    "webpack",
+    "template",
+    "plugin"
+  ],
+  "author": "Anuj Nair",
+  "license": "MIT",
+  "jest": {
+    "coverageReporters": [
+      "json",
+      "html"
+    ]
+  },
+  "dependencies": {
+    "memory-fs": "^0.5.0"
+  },
+  "peerDependencies": {
+    "webpack": "^4",
+    "html-webpack-plugin": "^4"
+  },
+  "devDependencies": {
+    "babel-jest": "^25.2.4",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-prettier": "^3.1.2",
+    "html-webpack-plugin": "^4.0.3",
+    "jest": "^25.2.4",
+    "prettier": "^2.0.2",
+    "webpack": "^4.42.1"
+  }
+}
